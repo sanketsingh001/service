@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: Loan Processing
+  datasource:
+    password: admin1234
+    username: root
+    url: jdbc:mysql://localhost:3306/training
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+      
+      
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+  info:
+    env:
+      enabled: true
+  endpoint:
+    shutdown:
+      enabled: true
+info:
+  app:
+    name: ${spring.application.name}
+logging:
+  level:
+    '[org.springframework]': info
+
+
